@@ -1,0 +1,96 @@
+
+       body { font-family: Arial, sans-serif; background-color: rgb(221, 221, 221); padding: 20px; margin: 0; }
+        h2 { color: rgb(3, 23, 109); }
+        
+        
+        /* Container dos Livros (O Grid Mágico) */
+        .container-livros {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(340px, 1fr)); /* Aumentado para 340px para acomodar as novas tags */
+            gap: 20px;
+        }
+
+        /* Cada Card de Livro Separado */
+        .card-livro {
+            background: white;
+            border-radius: 8px;
+            padding: 15px;
+            display: flex; /* Coloca a foto na esquerda e o texto na direita */
+            gap: 15px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+        }
+
+        .capa-livro {
+    width: 90px;
+    height: 130px;
+    border-radius: 4px;
+    flex-shrink: 0;
+    
+    /* 🌟 AS TRÊS LINHAS QUE CORRIGEM O ERRO PARA DIV: */
+    background-size: contain;     /* Força a imagem inteira a caber no espaço */
+    background-repeat: no-repeat;  /* Impede a imagem de ficar se duplicando */
+    background-position: center;   /* Centraliza a foto no meio do quadrado */
+}
+
+        .info-livro { 
+            display: flex; 
+            flex-direction: column; 
+            justify-content: space-between; 
+            width: 100%;
+        }
+        
+        .titulo-livro { font-weight: bold; color: rgb(33, 31, 87); margin: 0; font-size: 16px; }
+        .desc-livro { font-size: 13px; color: #666; margin: 5px 0 10px 0; }
+        
+        /* LINHA DE CATEGORIAS/TAGS (Design do Filtro) */
+        .linha-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 10px;
+            align-items: center;
+        }
+
+        /* Tag Base Comum */
+        .tag {
+            font-size: 11px;
+            padding: 4px 10px;
+            border-radius: 6px;
+            font-weight: bold;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        /* 1. Gênero do Livro */
+        .tag-genero {
+            background-color: #f0f0f4;
+            color: #555;
+            border: 1px solid #dcdce6;
+        }
+
+        /* 2. Botão/Link para o MEC Livros */
+        .tag-mec {
+            background-color: #e0f2fe;
+            color: #0369a1;
+            border: 1px solid #bae6fd;
+            transition: background 0.2s;
+        }
+        .tag-mec:hover {
+            background-color: #0369a1;
+            color: white;
+        }
+
+        /* 3. Status da Biblioteca Física (Quadradinhos) */
+        .status-disponivel {
+            background-color: #dcfce7;
+            color: #15803d;
+            border: 1px solid #bbf7d0;
+        }
+        .status-indisponivel {
+            background-color: #fee2e2;
+            color: #b91c1c;
+            border: 1px solid #fecaca;
+        }
+
+        /* Tag do Professor Dono do Card */
+        .tag-professor { font-size: 11px; background: #e0e7ff; color: #3730a3; padding: 3px 8px; border-radius: 12px; width: fit-content; }
