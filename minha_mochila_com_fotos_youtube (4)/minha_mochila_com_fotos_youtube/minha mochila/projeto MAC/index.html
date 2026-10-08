@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="estilo.css">
+        <title>projeto mac</title>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+        
+    </head>
+    <body>
+         
+
+        <header class="barra-de-cima">
+           
+            
+            <div class="logo">
+                <img src="mochilasemfundo.png" width="70px">
+                Minha mochila
+            </div>
+            
+            
+           <div class="search-container" style="position: relative;">
+    <div class="search-box">
+        <!-- CORRIGIDO: Tiramos o espaço do oninput -->
+        <input type="text" id="input-busca" class="search-text" placeholder="buscar livros, matérias..." oninput="buscarEListarSugestoes()">
+    </div>
+    <!-- Nova caixinha para mostrar as sugestões flutuando embaixo -->
+    <div id="caixa-sugestoes" style="position: absolute; width: 100%; background: white; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.15); top: 45px; left: 0; z-index: 2000; display: none; overflow: hidden;">
+    </div>
+</div>
+
+</div>
+        </header>
+         <nav class="menu-lateral">
+
+            <div class="tres-riscos" id="btn-menu">
+                <i class="bi bi-list"></i>
+            </div>
+             <ul>
+                <li>
+                        <a href="inicio.html" target="janela-centro">
+                    <span class="icone-menu"><i class="bi bi-house"></i></span>
+                    <span class="txt-link">página inicial</span>
+                        </a>
+                        <a href="mochilaprof.html" target="janela-centro">
+                    <span class="icone-menu"><i class="bi bi-backpack2"></i></span>
+                    <span class="txt-link">mochila do professor</span>
+                        </a>
+                </li>
+               
+                <li>
+                        <a href="biblioteca.html" target="janela-centro">
+                    <span class="icone-menu"><i class="bi bi-book"></i></span>
+                    <span class="txt-link">biblioteca digital</span>
+                        </a>
+                </li>
+               
+            </ul>
+
+          <!-- Coloque este bloco embaixo da barra lateral que você criou -->
+<div class="modos-acesso" style="padding: 10px; text-align: center;">
+    <hr style="border: 1px solid #444;">
+    <button onclick="definirModo('professor')" style="width: 90%; margin: 5px 0; padding: 8px; background: #28a745; color: white; border: none; border-radius: 4px; cursor: pointer;">📁 Modo Professor</button>
+    <button onclick="definirModo('aluno')" style="width: 90%; margin: 5px 0; padding: 8px; background: #007bff; color: white; border: none; border-radius: 4px; cursor: pointer;">📖 Modo Aluno</button>
+</div>
+
+            </nav>
+
+            <iframe src="inicio.html" name="janela-centro" class="conteudo-centro"></iframe>
+           
+        <script src="script.js"></script>
+    </body>
+
+
+</html>

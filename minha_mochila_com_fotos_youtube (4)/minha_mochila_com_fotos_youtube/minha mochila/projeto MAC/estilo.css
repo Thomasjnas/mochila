@@ -1,0 +1,141 @@
+
+body {
+    background-color: rgb(221, 221, 221);
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Ajustes na barra azul do topo, lembrem*/
+.barra-de-cima {
+    background-color: rgb(3, 23, 109);
+    width: 100%;
+    height: 70px;
+    padding: 0 20px;
+    box-sizing: border-box;
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+/* Alinha o grupo da esquerda */
+.grupo-esquerda {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.logo {
+    color: white;
+    font-weight: bold;
+    font-size: 22px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* CENTRALIZAÇÃO DOS TRÊS RISCOS */
+.tres-riscos {
+    color: white;
+    font-size: 30px;
+    cursor: pointer;
+    width: 100%;             
+    display: flex;           
+    justify-content: flex-start; 
+    padding: 10px 25px;      
+    margin-bottom: 20px;     
+}
+
+/* Customização da barra de busca */
+.search-box {
+    display: flex;
+    align-items: center;
+    background-color: white;
+    border-radius: 20px;
+    padding: 5px 15px;
+    width: 400px;
+}
+
+.search-text {
+    border: none;
+    background: none;
+    outline: none;
+    width: 100%;
+    font-size: 14px;
+    color: #333;
+}
+
+/* Estilo do menu lateral */
+nav.menu-lateral {
+    width: 65px;
+    height: calc(100vh - 70px);
+    background-color: rgb(33, 31, 87);
+    position: fixed;
+    top: 70px;
+    left: 0;
+    padding-top: 10px;      /* Reduzido um pouco para o botão não ficar tão baixo */
+    overflow: hidden;
+    transition: width 0.3s ease;
+    z-index: 999;
+}
+
+nav.menu-lateral.expandir {
+    width: 260px;
+}
+
+/* Remove marcadores da lista */
+nav.menu-lateral ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Ajuste nos itens da lista para alinhar o conteúdo */
+nav.menu-lateral ul li {
+    width: 100%;
+
+}
+
+/* ALINHAMENTO FIXO DOS LINKS (Garante que o texto não apareça antes da hora) */
+nav.menu-lateral ul li a {
+    color: white;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    padding: 15px 25px;      /* Mantém 25px de espaço na esquerda fixo */
+    width: 260px;            /* Força os links a terem a largura total do menu aberto */
+}
+
+/* Efeito visual opcional para dar o acabamento profissional do vídeo */
+nav.menu-lateral ul li a:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    opacity: 0.5;
+}
+
+.icone-menu {
+    font-size: 24px;
+    min-width: 30px;        /* Espaço quadrado fixo para o ícone no centro dos 80px */
+    display: flex;
+    justify-content: center;
+}
+
+.txt-link {
+    margin-left: 20px;
+    white-space: nowrap;    /* Impede o texto de pular linha e se deformar */
+}
+
+.conteudo-centro{
+    position: fixed;
+    top: 70px;
+    left: 65px;
+    width: calc(100vw - 65px);
+    height: calc(100vh - 70px);
+    border: none;
+}
